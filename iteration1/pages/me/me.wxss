@@ -1,0 +1,97 @@
+page {
+  background: #2c7aee;
+}
+
+.login_root {
+  display: flex;
+  padding: 50rpx;
+  align-items: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 180rpx;
+  height: 180rpx;
+  margin-right: 30rpx;
+  background: #2c7aee;
+
+}
+
+.name {
+  font-size: 40rpx;
+  color: white;
+}
+
+.tuichu {
+  font-size: 32rpx;
+  color: FFFFFF;
+  margin-top: 10rpx;
+}
+
+/*  下面是关键去除边框 */
+.button {
+  width: 100%;
+  background: white;
+  border: none;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1.5;
+  font-size: 16px
+}
+
+/*  下面是关键去除边框 */
+.button::after {
+  border: none;
+  border-radius: 0;
+}
+
+/* 九宫格区域 */
+.category_panel1 {
+    width: 100%;
+    display: flex;
+    color: #666;
+    flex-direction: column;
+    font-size: 11px;
+    justify-content: space-around;
+  }
+  
+  .category-panel2 {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    color: #666;
+    flex-direction: row;
+    font-size: 11px;
+    justify-content: space-around;
+  }
+  
+  .category-item {
+    display: flex;
+    width: 60px;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .category-item-image {
+    width: 50px;
+    height: 50px;
+    overflow: unset;
+    padding: 15px 12px 0 6px;
+  }
+  
+  .category-item-image1 {
+    width: 50px;
+    height: 45px;
+    overflow: unset;
+    padding: 15px 12px 0 6px;
+  }
+  
+  .category-item-text {
+    margin-top: 11px;
+
+  }
+  
+  .category-item-text1 {
+    margin-top: 0px;
+  }
