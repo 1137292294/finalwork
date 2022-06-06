@@ -1,0 +1,40 @@
+page {
+  background:#F0FFF0;
+  height: 100%;
+}
+
+/*列表  */
+.item {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  border-bottom: 2px #2c7aee solid;
+  background-color: #F0FFF0;
+  margin-top: 3rpx;
+}
+
+.item_name {
+  font-size: 33rpx;
+  color: purple;
+}
+
+.item_lianxi {
+  font-size: 33rpx;
+  color: purple;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25rpx;
+}
+
+.item2_call {
+  color:red;
+  padding: 3rpx 10rpx;
+  width: 50px;
+  height: 50px;
+}
+
+.item2_weixin {
+  color: red;
+  border: 1px solid red ;
+  padding: 3rpx 10rpx;
+}

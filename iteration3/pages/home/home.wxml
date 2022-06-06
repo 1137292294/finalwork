@@ -1,0 +1,70 @@
+<!-- 顶部欢迎信息 -->
+<view class='rolling_bar'>
+    <view class="rolling_bar_text">校园二手商场欢迎您使用本小程序，希望我们的服务能让您满意</view>
+</view>
+
+
+<!-- 顶部轮播图 -->
+<view>
+	<swiper indicator-dots="{{true}}" indicator-color="#2c7aee" autoplay="true" circular="true">
+		<block wx:for="{{banner}}" wx:key="banner">
+			<swiper-item bindtap="goRe">
+				<image src='{{item.picUrl}}' mode="widthFix" style="width:100%;height:100%;" />
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+
+<!-- 搜索框 -->
+<view class="searchRoot">
+    <image class="searchImg" bindtap="goSearch" src="/image/search.png"></image>
+	<input class="searchInput" bindconfirm='goSearch' confirm-type='search' bindinput="getSerWord" placeholder="搜索您想要的商品" />
+	
+</view>
+
+<view class="category_panel1">
+	<view class="category-panel2">
+		<view bindtap='goSeMall' class="category-item">
+			<image class="category-item-image" src="/image/jinrushichang.png" />
+			<text class="category-item-text">进入市场</text>
+		</view>
+		
+		<view bindtap='goRe' class="category-item">
+			<image class="category-item-image" src="/image/shangmenhuishou.png" />
+			<text class="category-item-text">上门回收</text>
+		</view>
+	</view>
+</view>
+
+<view class="category_panel1">
+	<view class="category-panel2">
+		<view bindtap='goNewGo' class="category-item">
+			<image class="category-item-image" src="/image/rexiaochanpin.png" />
+			<text class="category-item-text">热销产品</text>
+		</view>
+		<view bindtap='goInfo' class="category-item">
+			<image class="category-item-image" src="/image/zuozhexinxi.png" />
+			<text class="category-item-text">作者信息</text>
+		</view>
+	
+	</view>
+</view>
+
+
+<!-- 热门推荐商品 -->
+<view wx:if="{{goodList&&goodList.length>0}}">
+	<view class="hot_tip">热门推荐</view>
+	<block wx:for="{{goodList}}" wx:key="index">
+		<view class="good_item" data-id="{{item._id}}" bindtap="goGoods">
+			<image class="cai_img" src="{{item.img[0]}}" />
+			<view class="cai_root2">
+				<view class="cai_title" data-index="{{index}}">商品名称：{{item.name}}</view>
+				<view class="price-stepper">
+					<view class="cai_price" data-index="{{index}}">{{item.price}}</view>
+				</view>
+				<view class="cai_sell">剩余：{{item.num}} </view>
+				
+			</view>
+		</view>
+	</block>
+</view>

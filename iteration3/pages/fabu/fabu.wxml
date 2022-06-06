@@ -1,0 +1,35 @@
+<form catchsubmit="submitData" catchreset="reset">
+  <view class='title'>发布学校</view>
+  <picker class="picker" name="school" value="{{school}}" bindchange="pickSchool" range="{{schools}}">{{school}}</picker>
+  <view class="title">商品类型</view>
+  <picker class="picker" name="type" value="{{type}}" bindchange="pickType" range="{{types}}">{{type}}</picker>
+
+  <view class="title">商品名称</view>
+  <input class="input" name="name"/>
+  <view class="title">卖家联系方式</view>
+  <input class="input" name="phone" />
+  <view class="title">商品价格</view>
+  <input class="input" name="price" type="number" />
+  <view class="title">商品出售数量</view>
+  <input class="input" name="num" type="number" />
+
+  <view class="title">商品详细内容</view>
+  <textarea class="desc" name="content" />
+  <view class="title">商品图片</view>
+  <!-- 图片区域 -->
+  <view class="imageRootAll">
+    <block wx:for="{{imgList}}" wx:key="index">
+      <view class="imgItem">
+        <image class="img" src='{{item}}' mode='aspectFill'></image>
+        <image class="closeImg" bindtap="deleteImage" src="/image/close.png" data-index="{{index}}" />
+      </view>
+    </block>
+    <!-- 选择图片按钮 -->
+    <view wx:if="{{imgList.length<6}}" class="imgItem" bindtap="chooseImage">
+      <image class="photo" src="/image/photo.png"></image>
+    </view>
+  </view>
+
+  <button class="submit" formType="submit">发布</button>
+  <button class="submit" formType="reset">重置</button>
+</form>

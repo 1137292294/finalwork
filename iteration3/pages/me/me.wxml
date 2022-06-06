@@ -1,0 +1,56 @@
+<!--pages/me/me.wxml-->
+<!-- 登陆和未登陆 -->
+<view class="login_root" wx:if="{{userInfo&&userInfo.nickName}}">
+	<image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+	<view>
+		<view class="name">{{userInfo.nickName}}</view>
+		<view class="tuichu" bindtap="cancelUserInfo">退出登录</view>
+	</view>
+</view>
+<view wx:else class="login_root" bindtap="getUserInfo">
+	<image class="avatar" src="/image/nouser.png"></image>
+	<view class="name">授权登陆</view>
+</view>
+
+<view class="category_panel1">
+	<!-- 第一排 -->
+	<view class="category-panel2">
+		<view class="category-item">
+			<image class="category-item-image" src="/image/myfankui.png" />
+			<button open-type="feedback" class="button" plain="true" style="border: none; font-size: 15px;">反馈建议</button>
+		</view>
+		
+		<view class="category-item">
+			<image class="category-item-image" src="/image/mykefu.png" />
+            <button open-type="contact" class="button" plain="true" style="border: none; font-size: 15px;">在线客服</button>
+		</view>
+	</view>
+</view>
+
+<view wx:if="{{userInfo&&userInfo.nickName}}">
+    <view class="category_panel1">
+	<!-- 第一排 -->
+	    <view class="category-panel2" bindtap="goMyOrder">
+		    <view class="category-item">
+			    <image class="category-item-image" src="/image/mydingdan.png" />
+			    <button class="button" plain="true" style="border: none; font-size: 15px;">查看订单</button>
+		    </view>
+		
+		    <view class="category-item" bindtap="goMyComment">
+			    <image class="category-item-image" src="/image/mypinglun.png" />
+                <button class="button" plain="true" style="border: none; font-size: 15px;">我的评价</button>
+		    </view>
+        </view>
+	</view>
+    <view class="category_panel1">
+	<!-- 第一排 -->
+	    <view class="category-panel2" bindtap="goSeller">
+		    <view class="category-item">
+			    <image class="category-item-image" src="/image/myfabu.png" />
+			    <button class="button" plain="true" style="border: none; font-size: 15px;">我发布的</button>
+		    </view>
+        </view>
+	</view>
+    
+</view>
+	

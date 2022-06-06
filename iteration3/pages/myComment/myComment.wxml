@@ -1,0 +1,24 @@
+<!--导入时间格式化工具filter.wxs-->
+<wxs src="../../utils/filter.wxs" module="filters" />
+<view wx:if="{{list&&list.length>0}}">
+	<!-- 外层 -->
+	<view class='item_root' wx:for="{{list}}" wx:key="key">
+		<text class='time'>{{item._createTime?filters.formatDate(item._createTime):''}}评论:</text>
+		<view class='content'>{{item.content}}</view>
+		<view class="item_good" bindtap="goDetail" data-goodid="{{item.goodId}}">
+			<image class="item_img" src="{{item.goodImg}}"></image>
+			<view class="item_title">{{item.goodName}}</view>
+		</view>
+		<!-- 评分星星数 -->
+		<view class="star_root">
+			星星：
+			<view wx:for="{{item.starNum*1}}" wx:key="index">
+				<image class="star_img" src="/image/xing2.png" />
+			</view>
+			<view wx:for="{{5-item.starNum}}" wx:key="index">
+				<image class="star_img" src="/image/xing1.png" />
+			</view>
+		</view>
+
+	</view>
+</view>

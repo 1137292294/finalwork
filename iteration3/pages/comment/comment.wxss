@@ -1,0 +1,62 @@
+/* 商品区域 */
+.good {
+    display: flex;
+    margin: 20rpx;
+}
+
+page {
+    background: #f0fff0;
+    height: 100%;
+}
+  
+
+.good image {
+    min-width: 140rpx;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 20rpx;
+    margin-right: 10rpx;
+}
+
+.good_title {
+    font-size: 37rpx;
+    margin-top: 5rpx;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.good_price {
+    font-size: 34rpx;
+    margin-top: 10rpx;
+    color: purple;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* 评分相关 */
+.star_root {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 60rpx 20rpx;
+    font-size: 50rpx;
+}
+
+.star_img {
+    width: 80rpx;
+    height: 80rpx;
+    margin-left: 20rpx;
+}
+
+/* 评论内容 */
+.content {
+    width: 650rpx;
+    margin: 30rpx;
+    border: 1px solid gray;
+    padding: 15rpx;
+}
+
+/* 发布按钮 */
+.submit {
+    background: var(--themeColor);
+    color: white;
+    margin: 50rpx 80rpx;
+}
