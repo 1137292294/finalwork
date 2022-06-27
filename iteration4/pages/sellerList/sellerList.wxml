@@ -1,0 +1,12 @@
+<view class="seller_list">
+    <block wx:for="{{sellerList}}" wx:key="index">
+        <view class="seller_item" data-id="{{item._id}}" bindtap="goDetail">
+            <image class="seller_item_img" src="{{item.img[0]}}" />
+            <view>
+                <view class="seller_item_title">商品名称：{{item.name}}</view>
+                <text class="seller_item_num">剩余:{{item.num}} </text>
+                <text class="seller_item_price">价格：￥{{item.price}}</text>        
+            </view>
+        </view>
+    </block>
+</view>

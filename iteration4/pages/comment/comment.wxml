@@ -1,0 +1,22 @@
+<!-- 商品区域 -->
+<view class="good">
+    <image src="{{order.good.img}}" />
+    <view>
+        <view class="good_title">{{order.good.name}}</view>
+        <view class="good_price">￥:{{order.good.price}}</view>
+    </view>
+</view>
+<!-- 评分 -->
+<view class="star_root">
+    <view>
+        评分:
+    </view>
+    <view wx:for="{{5}}" wx:key="item" bindtap="pingfen" data-index="{{index}}">
+        <image class="star_img" src="{{index < starNum ?  '/image/xing2.png' : '/image/xing1.png' }}">
+        </image>
+    </view>
+</view>
+<!-- 评论内容 -->
+<textarea class="content" placeholder="请输入评论内容" bindinput="getContent"></textarea>
+
+<button class="submit" bindtap="submitComment">提交评论</button>

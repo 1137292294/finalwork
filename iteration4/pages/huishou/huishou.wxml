@@ -1,0 +1,17 @@
+<view wx:if="{{list&&list.length>0}}">
+  <block wx:for="{{list}}" wx:key="index">
+    <view class="item">
+      <view class="item_name" data-index="{{index}}">回收商名称：{{item.name}}</view>
+      <view class="item_name" >负责区域：{{item.city}}</view>
+      <view class="item_lianxi" bindtap="goPone" data-phone="{{item.phone}}">
+        <text>联系方式：{{item.phone}}（点击拨打）</text>
+        <view class="item2_call"><image src="/image/tele.png" style="width: 30px; height: 30px;"></image></view>
+      </view>
+      <view class="item_lianxi" bindtap="goWeiXin" data-weixin="{{item.weixin}}">
+        <text>微信号：{{item.weixin}}（点击复制）</text>
+        <view class="item2_call"><image src="/image/wechat.png" style="width: 30px; height: 30px;"></image></view>
+      </view>
+      
+    </view>
+  </block>
+</view>

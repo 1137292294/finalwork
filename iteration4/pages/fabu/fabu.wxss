@@ -1,0 +1,94 @@
+.title {
+  font-weight: bold;
+  font-size: 36rpx;
+  color: purple;
+  margin: 20rpx 0 10rpx 20rpx;
+  text-align: center;
+}
+
+page {
+    background:#F0FFF0;
+    height: 100%;
+  }
+  
+
+/* 所属学校 */
+.picker {
+  width: 100%;
+  font-size: 33rpx;
+  color: gray;
+  margin-bottom: 20rpx;
+  text-align: center;
+  color: purple;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.input {
+  border: 0;
+  outline: 0;  
+  border: solid 1px #2c7aee;
+  background-color:whitesmoke;
+  width: 690rpx;
+  margin: 5rpx 30rpx;
+  color: purple;
+  height: 30px;
+  border-radius: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.desc {
+  margin-top: 15rpx;
+  width: 690rpx;
+  border: solid 1px #2c7aee;
+  margin: 28rpx;
+  height: 120rpx;
+  background-color:whitesmoke;
+  color: purple;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.imageRootAll {
+  margin: 20rpx 50rpx;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.imgItem {
+  margin: 6rpx;
+  position: relative;
+  width: 200rpx;
+  height: 200rpx;
+  background: gainsboro;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.closeImg {
+  position: absolute;
+  right: 0px;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.photo {
+  width: 50%;
+  height: 50%;
+  margin: 25%;
+}
+
+/* 发布按钮 */
+.submit {
+  background: #2c7aee;
+  color: white;
+  margin: 30rpx 80rpx;
+}
